@@ -1,6 +1,6 @@
-include "header.fbs"
-include "sensor_payload.fbs"
-include "gateway_payload.fbs"
+include "header.fbs";
+include "sensor_payload.fbs";
+include "gateway_payload.fbs";
 
 namespace GatewayProtocol;
 

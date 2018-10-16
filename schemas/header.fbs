@@ -1,6 +1,6 @@
 namespace GatewayProtocol;
 
-struct Header {
+table Header {
   source_identifier:string;
   destination_identifier:string;
   serialization_timestamp:string;

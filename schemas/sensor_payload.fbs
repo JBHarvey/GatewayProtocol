@@ -5,7 +5,7 @@ include "request.fbs";
 
 namespace GatewayProtocol.Payload.Sensor;
 
-union Content { Message, RawData, Request, Response }
+union Content { Message, RawData, Request, Result }
 
 table Payload{
   sensor_id:Identifier;

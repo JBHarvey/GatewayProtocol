@@ -1,3 +1,4 @@
+include "request.fbs";
 include "gateway_error.fbs";
 include "sensor_information.fbs";
 
@@ -12,10 +13,14 @@ table ConnectedSensors {
   sensors:[SensorConnectionUpdate];
 }
 
-struct SensorConnectionUpdate {
+table SensorConnectionUpdate {
   id:Sensor.Identifier;
   connectionStatus:Sensor.ConnectionStatusCode;
 }
 
 
-union Message { Heartbeat, ConnectedSensors, SensorConnectionUpdate, Sensor.Metadata, Response, Error }
+union MessageContent { Heartbeat, ConnectedSensors, SensorConnectionUpdate, Sensor.Metadata, Result, Error }
+
+table Message {
+  content:MessageContent;
+}

@@ -2,7 +2,7 @@ include "request.fbs";
 
 namespace GatewayProtocol.Payload.Sensor;
 
-struct Identifier {
+table Identifier {
   value:string;
 }
 
