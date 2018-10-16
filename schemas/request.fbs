@@ -1,0 +1,13 @@
+namespace GatewayProtocol.Payload;
+
+enum RequestCode : uint16 { Noop }
+
+table Request {
+  code:RequestCode = Noop;
+  payload:string;
+}
+
+table Result {
+  request:Request;
+  success:bool = true; 
+}

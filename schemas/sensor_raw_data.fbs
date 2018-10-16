@@ -1,0 +1,4 @@
+namespace GatewayProtocol.Payload.Sensor;
+
+table RawData {
+}

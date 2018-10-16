@@ -1,0 +1,21 @@
+include "request.fbs";
+
+namespace GatewayProtocol.Payload.Sensor;
+
+table Metadata {
+}
+
+enum ConnectionStatusCode : uint8 { Idle, Streaming, DisconnectedByUser, NotResponding, ConnectionError }
+
+table Status {
+}
+
+table Error {
+}
+
+union InformationContent { Metadata, Status, Response, Error }
+
+table Information {
+  sensor_timestamp:string;
+  data:InformationContent:
+}
