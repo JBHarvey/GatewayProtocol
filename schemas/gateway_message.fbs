@@ -1,0 +1,21 @@
+include "gateway_error.fbs";
+include "sensor_information.fbs";
+
+namespace GatewayProtocol.Payload.Gateway;
+
+table Heartbeat {
+  is_alive:bool = true;
+  sensors:ConnectedSensors;
+}
+
+table ConnectedSensors {
+  sensors:[SensorConnectionUpdate];
+}
+
+struct SensorConnectionUpdate {
+  id:Sensor.Identifier;
+  connectionStatus:Sensor.ConnectionStatusCode;
+}
+
+
+union Message { Heartbeat, ConnectedSensors, SensorConnectionUpdate, Sensor.Metadata, Response, Error }

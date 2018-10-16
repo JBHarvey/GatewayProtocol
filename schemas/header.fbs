@@ -5,5 +5,3 @@ struct Header {
   destination_identifier:string;
   serialization_timestamp:string;
 }
-
-root_type Header;

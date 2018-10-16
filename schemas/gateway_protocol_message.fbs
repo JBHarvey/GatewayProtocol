@@ -1,0 +1,14 @@
+include "header.fbs"
+include "sensor_payload.fbs"
+include "gateway_payload.fbs"
+
+namespace GatewayProtocol;
+
+union Content { Payload.Sensor.Payload, Payload.Gateway.Payload }
+
+table Message {
+  header:Header;
+  data:Content;
+}
+
+root_type Message;
