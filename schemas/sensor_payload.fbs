@@ -1,6 +1,6 @@
 include "sensor_information.fbs";
 include "sensor_message.fbs";
-include "sensor_raw_content.fbs";
+include "sensor_raw_data.fbs";
 include "request.fbs";
 
 namespace GatewayProtocol.Sensor;
