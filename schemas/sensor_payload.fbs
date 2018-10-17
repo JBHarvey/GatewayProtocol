@@ -3,11 +3,11 @@ include "sensor_message.fbs";
 include "sensor_raw_data.fbs";
 include "request.fbs";
 
-namespace GatewayProtocol.Payload.Sensor;
+namespace GatewayProtocol.Sensor;
 
 union Content { Message, RawData, Request, Result }
 
-table Payload{
+table 
   sensor_id:Identifier;
   data:Content;
 }

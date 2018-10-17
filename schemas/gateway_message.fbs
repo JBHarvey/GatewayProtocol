@@ -2,7 +2,7 @@ include "request.fbs";
 include "gateway_error.fbs";
 include "sensor_information.fbs";
 
-namespace GatewayProtocol.Payload.Gateway;
+namespace GatewayProtocol.Gateway;
 
 table Heartbeat {
   is_alive:bool = true;

@@ -1,9 +1,9 @@
 include "gateway_message.fbs";
 
-namespace GatewayProtocol.Payload.Gateway;
+namespace GatewayProtocol.Gateway;
 
-union PayloadContent { Message, Request }
+union ontent { Message, Request }
 
-table Payload {
-  data:PayloadContent;
+table {
+  data:ontent;
 }

@@ -1,4 +1,4 @@
-namespace GatewayProtocol.Payload.Gateway;
+namespace GatewayProtocol.Gateway;
 
 enum ErrorCode : uint32 { NoError }
 

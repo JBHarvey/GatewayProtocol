@@ -1,6 +1,6 @@
 include "request.fbs";
 
-namespace GatewayProtocol.Payload.Sensor;
+namespace GatewayProtocol.Sensor;
 
 table Identifier {
   value:string;
