@@ -4,7 +4,7 @@ include "gateway_payload.fbs";
 
 namespace GatewayProtocol;
 
-union Content { Sensor. Gateway.}
+union Content { Sensor.Payload Gateway.Payload }
 
 table Message {
   header:Header;
