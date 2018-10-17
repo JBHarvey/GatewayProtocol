@@ -1,6 +1,6 @@
 include "sensor_information.fbs";
 include "sensor_message.fbs";
-include "sensor_raw_data.fbs";
+include "sensor_raw_content.fbs";
 include "request.fbs";
 
 namespace GatewayProtocol.Sensor;
@@ -9,5 +9,5 @@ union PayloadContent { Message, RawData, Request, Result }
 
 table Payload {
   sensor_id:Identifier;
-  data:PayloadContent;
+  content:PayloadContent;
 }

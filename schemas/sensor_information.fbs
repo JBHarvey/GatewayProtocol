@@ -32,5 +32,5 @@ union InformationContent { Metadata, Status, Error }
 
 table Information {
   sensor_timestamp:string;
-  data:InformationContent;
+  content:InformationContent;
 }

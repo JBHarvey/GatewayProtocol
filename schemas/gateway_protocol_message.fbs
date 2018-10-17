@@ -8,7 +8,7 @@ union Content { Sensor.Payload, Gateway.Payload }
 
 table Message {
   header:Header;
-  data:Content;
+  content:Content;
 }
 
 root_type Message;
