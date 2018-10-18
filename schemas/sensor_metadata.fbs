@@ -1,3 +1,5 @@
+include "sensor_information.fbs";
+
 namespace GatewayProtocol.Sensor;
 
 table Identifier {
