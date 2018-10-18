@@ -1,0 +1,16 @@
+namespace GatewayProtocol.Sensor;
+
+table Identifier {
+  value:string;
+}
+
+table Metadata {
+  identifier:Identifier;
+  vendor_identifier:string;
+  sensor:string;
+  serial_number:string;
+  number_of_pixel:uint16;
+  field_of_view:uint32;
+  field_of_interest:uint32;
+  channels_enable:[bool];
+}

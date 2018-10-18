@@ -1,21 +1,5 @@
-include "request.fbs";
 
 namespace GatewayProtocol.Sensor;
-
-table Identifier {
-  value:string;
-}
-
-table Metadata {
-  identifier:Identifier;
-  vendor_identifier:string;
-  sensor:string;
-  serial_number:string;
-  number_of_pixel:uint16;
-  field_of_view:uint32;
-  field_of_interest:uint32;
-  channels_enable:[bool];
-}
 
 enum ConnectionStatusCode : uint8 { Idle, Streaming, DisconnectedByUser, NotResponding, ConnectionError }
 
@@ -28,7 +12,7 @@ table Status {
 table Error {
 }
 
-union InformationContent { Metadata, Status, Error }
+union InformationContent { Status, Error }
 
 table Information {
   sensor_timestamp:string;
