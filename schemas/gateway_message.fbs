@@ -1,7 +1,7 @@
 include "request.fbs";
 include "gateway_error.fbs";
 include "sensor_metadata.fbs";
-include "sensor_metadata.fbs";
+include "sensor_information.fbs";
 
 namespace GatewayProtocol.Gateway;
 

@@ -1,0 +1,5 @@
+namespace GatewayProtocol;
+
+table Identifier {
+  value:string;
+}

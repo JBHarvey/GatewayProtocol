@@ -1,3 +1,4 @@
+include "identifier.fbs";
 include "sensor_information.fbs";
 include "sensor_message.fbs";
 include "sensor_raw_data.fbs";

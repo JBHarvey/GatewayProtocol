@@ -1,10 +1,6 @@
-include "sensor_information.fbs";
+include "identifier.fbs";
 
 namespace GatewayProtocol.Sensor;
-
-table Identifier {
-  value:string;
-}
 
 table Metadata {
   identifier:Identifier;
