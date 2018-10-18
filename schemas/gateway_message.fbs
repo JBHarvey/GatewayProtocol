@@ -15,7 +15,7 @@ table ConnectedSensors {
 }
 
 table SensorConnectionUpdate {
-  id:Sensor.Identifier;
+  id:Identifier;
   connectionStatus:Sensor.ConnectionStatusCode;
 }
 
