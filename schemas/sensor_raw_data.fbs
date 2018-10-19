@@ -1,4 +1,17 @@
 namespace GatewayProtocol.Sensor;
 
+table GuardianRawData {
+  data:[int16];
+}
+
+table AWLRawData {
+  data:[int32];
+}
+
+union SensorRawDataCoice : { AWLRawData, GuardianRawData } 
+
 table RawData {
+  number_of_channels:uint16;
+  number_of_data_per_channel:uint16;
+  content:SensorRawDataChoice;
 }

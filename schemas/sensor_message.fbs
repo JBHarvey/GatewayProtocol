@@ -1,4 +1,20 @@
 namespace GatewayProtocol.Sensor;
 
+table Track {
+  id:uint16;
+  distance:uint16;
+  intensity:uint16;
+  speed:int16;
+  acceleration:int16;
+  confidence_level:uint8;
+} 
+
+table Pixel {
+  id:uint16;
+  tracks:[Track];
+}
+
 table Message {
+  id:uint16;
+  pixels:[Pixel];
 }
