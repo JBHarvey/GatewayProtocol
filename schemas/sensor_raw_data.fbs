@@ -8,7 +8,7 @@ table AWLRawData {
   data:[int32];
 }
 
-union SensorRawDataCoice : { AWLRawData, GuardianRawData } 
+union SensorRawDataChoice { AWLRawData, GuardianRawData } 
 
 table RawData {
   number_of_channels:uint16;
