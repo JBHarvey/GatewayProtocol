@@ -6,7 +6,7 @@ table Track {
   intensity:uint16 = 0;
   speed:int16 = 0;
   acceleration:int16 = 0;
-  confidence_level:uint8 = 0;
+  confidence_level:uint16 = 0;
 } 
 
 table Pixel {
