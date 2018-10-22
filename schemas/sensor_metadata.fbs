@@ -1,5 +1,3 @@
-include "identifier.fbs";
-
 namespace GatewayProtocol.Sensor;
 
 table Metadata {
