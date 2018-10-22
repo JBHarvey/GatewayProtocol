@@ -9,6 +9,6 @@ namespace GatewayProtocol.Sensor;
 union PayloadContent { Message, RawData, Information, Request, Result }
 
 table Payload {
-  sensor_id:Identifier;
+  sensor_id:string;
   content:PayloadContent;
 }

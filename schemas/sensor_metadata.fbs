@@ -3,7 +3,7 @@ include "identifier.fbs";
 namespace GatewayProtocol.Sensor;
 
 table Metadata {
-  identifier:Identifier;
+  identifier:string;
   vendor_identifier:string;
   sensor:string;
   serial_number:string;
