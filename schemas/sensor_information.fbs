@@ -14,5 +14,6 @@ table Error {
 union InformationContent { Status, Error }
 
 table Information {
+  sensor_timestamp:string;
   content:InformationContent;
 }
