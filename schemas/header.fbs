@@ -1,7 +1,9 @@
+include "metrics_timestamps.fbs";
+
 namespace GatewayProtocol;
 
 table Header {
   source_identifier:string;
   destination_identifier:string;
-  serialization_timestamp:string;
+  timestamps_tracking:Metrics.TimestampsTracking;
 }

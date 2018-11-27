@@ -5,7 +5,5 @@ enum ErrorCode : uint32 { NoError }
 table Error {
   code:ErrorCode = NoError;
   has_recovered:bool = true;
-  occurrence_timestamp:string;
-  source:string;
   description:string;
 }
