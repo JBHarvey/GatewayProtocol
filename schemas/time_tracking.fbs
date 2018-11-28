@@ -1,4 +1,4 @@
-namespace GatewayProtocol.Metric;
+namespace GatewayProtocol;
 
 table TimePoint {
   checkpoint_location:string;
@@ -10,6 +10,6 @@ table ServiceTimestamps {
   time_points:[TimePoint];
 }
 
-table TimestampsTracking {
+table TimeTracking {
   timestamps:[ServiceTimestamps];
 }

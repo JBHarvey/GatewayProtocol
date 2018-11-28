@@ -1,9 +1,9 @@
-include "metric_timestamps.fbs";
+include "time_tracking.fbs";
 
 namespace GatewayProtocol;
 
 table Header {
   source_identifier:string;
   destination_identifier:string;
-  timestamps_tracking:Metric.TimestampsTracking;
+  time_tracking:TimeTracking;
 }
