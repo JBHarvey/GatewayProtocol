@@ -1,0 +1,9 @@
+#!/bin/sh
+
+git tag -d prod-ready
+
+git push origin :refs/tags/prod-ready
+
+git tag prod-ready
+
+git push --tags
