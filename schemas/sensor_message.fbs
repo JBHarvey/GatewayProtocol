@@ -2,10 +2,10 @@ namespace GatewayProtocol.Sensor;
 
 table Track {
   id:uint16 = 0;
-  distance:uint16 = 0;
-  intensity:uint16 = 0;
-  speed:int16 = 0;
-  acceleration:int16 = 0;
+  distance:double = 0;
+  intensity:double = 0;
+  speed:double = 0;
+  acceleration:double = 0;
   confidence_level:uint8 = 0;
 } 
 
