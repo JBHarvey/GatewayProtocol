@@ -27,7 +27,6 @@
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
-.buildconfig
 
 # Dependencies
 vendor/
