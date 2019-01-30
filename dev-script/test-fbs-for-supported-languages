@@ -1,0 +1,28 @@
+#!/bin/sh
+
+if [ -d build ]; then rm -Rf build; fi
+mkdir build
+mkdir build/go
+mkdir build/cpp
+mkdir build/python
+
+LS="ls -lAh --color=always"
+PROTOCOL_DIR=GatewayProtocol
+
+echo "Testing for go"
+flatc -o build/go --go schemas/*.fbs
+echo "Result: "
+$LS build/go/$PROTOCOL_DIR
+
+
+echo "Testing for cpp"
+flatc -o build/cpp --cpp --no-prefix --scoped-enums schemas/*.fbs
+echo "Result: "
+$LS build/cpp
+
+
+echo "Testing for python"
+flatc -o build/python --python schemas/*.fbs
+echo "Result: "
+$LS build/python/$PROTOCOL_DIR
+
