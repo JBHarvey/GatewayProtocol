@@ -1,13 +1,30 @@
 namespace GatewayProtocol;
 
-enum RequestCode : uint16 { Noop, Set, Get, BulkSet, BulkGet }
+enum RequestCode : uint16 { Noop, Get, Set, BulkGet, BulkSet }
 
-union ParameterValue { uint64, float64, bool, string }
+union ParameterValue { IntegerParameter, FloatParameter, BooleanParameter, StringParameter }
+
+table IntegerParameter {
+  value:uint64 = 0;
+  unit:string;
+}
+
+table FloatParameter {
+  value:float64 = 0.0;
+  unit:string;
+}
+
+table BooleanParameter {
+  value:bool = false;
+}
+
+table StringParameter {
+  value:string;
+}
 
 table Parameter {
   name:string;
   value:ParameterValue;
-  unit:string;
 }
 
 table Request {
@@ -18,5 +35,5 @@ table Request {
 table Result {
   request:Request;
   success:bool = true;
-  payload:[Parameter]
+  payload:[Parameter];
 }
