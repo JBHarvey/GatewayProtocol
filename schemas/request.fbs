@@ -21,11 +21,11 @@ table Boolean {
 }
 
 table Text {
-  value:string;
+  value:string (required);
 }
 
 table Parameter {
-  required:name:string;
+  name:string (required);
   valueType:ValueType;
   unit:string;
 }
@@ -36,7 +36,7 @@ table Request {
 }
 
 table Result {
-  required:request:Request;
+  request:Request (required);
   success:bool = true;
   payload:[Parameter];
 }
