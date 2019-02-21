@@ -20,7 +20,7 @@ table SensorConnectionUpdate {
 }
 
 
-union MessageContent { Heartbeat, ConnectedSensors, SensorConnectionUpdate, Sensor.Metadata, Result, Error }
+union MessageContent { Heartbeat, ConnectedSensors, SensorConnectionUpdate, Sensor.Metadata, Response, Error }
 
 table Message {
   content:MessageContent;

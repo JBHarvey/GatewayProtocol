@@ -2,7 +2,7 @@ namespace GatewayProtocol;
 
 enum RequestCode : uint16 { Noop, Get, Set, BulkGet, BulkSet }
 
-union ParameterContent { UnsignedIntegerParameter, SignedIntegerParameter, RealNumberParameter, BooleanParameter, TextParameter }
+union ParameterContent { UnsignedIntegerParameter, SignedIntegerParameter, RealNumberParameter, BooleanParameter, TextContent }
 
 table UnsignedIntegerParameter {
   value:uint64 = 0;
@@ -20,7 +20,7 @@ table BooleanParameter {
   value:bool = false;
 }
 
-table TextParameter {
+table TextContent {
   value:string (required);
 }
 
@@ -34,15 +34,17 @@ table ParameterRequest {
   parameters:[Parameter];
 }
 
-union QueryPayload { ParameterRequest }
+union RequestPayload { ParameterRequest }
 
 table Request {
   code:RequestCode = Noop;
-  payload:QueryPayload;
+  payload:RequestPayload;
 }
+
+union ResponsePayload { Parameter, TextContent }
     
-table Result {
+table Response {
   request:Request (required);
   success:bool = true;
-  payload:QueryPayload;
+  payload:ResponsePayload;
 }
