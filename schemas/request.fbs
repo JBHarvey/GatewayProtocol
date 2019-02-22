@@ -41,7 +41,7 @@ table Request {
   payload:RequestPayload;
 }
 
-union ResponsePayload { Parameter, TextContent }
+union ResponsePayload { Parameter, ParameterList, TextContent }
     
 table Response {
   request:Request (required);
