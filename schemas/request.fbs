@@ -1,6 +1,6 @@
 namespace GatewayProtocol;
 
-enum RequestCode : uint16 { Noop, Get, Set, BulkGet, BulkSet }
+enum RequestCode : uint16 { Noop, Get, Set, BulkGet, BulkSet, GetAllParamNames }
 
 union ParameterContent { UnsignedIntegerParameter, SignedIntegerParameter, RealNumberParameter, BooleanParameter, TextContent }
 
