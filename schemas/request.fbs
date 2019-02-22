@@ -30,11 +30,11 @@ table Parameter {
   unit:string;
 }
 
-table ParameterRequest {
+table ParameterList {
   parameters:[Parameter];
 }
 
-union RequestPayload { ParameterRequest }
+union RequestPayload { ParameterList }
 
 table Request {
   code:RequestCode = Noop;
